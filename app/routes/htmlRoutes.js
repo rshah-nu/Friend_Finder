@@ -1,25 +1,14 @@
 const express = require('express');
 var router = express.Router();
+const path = require('path');
 
 router.get('/', (req, res) => {
-
+    res.sendFile(path.join(__dirname, "/../public/home.html"));
 });
 
 router.get('/survey', (req, res) => {
-
+    res.sendFile(path.join(__dirname, "/../public/survey.html"));
 });
-// router.get('/', (req, res) => {
-//     res.send('You have hit the / route!');
-// });
-
-// router.get('/about/:userName', (req, res) => {
-//     userName = req.params.userName;
-//     res.send(`You have hit the /about/${userName} route!`);
-// });
-
-// router.get('/bubbles', (req, res) => {
-//     res.send('You have hit the /bubbles route!');
-// });
 
 module.exports = {
     router

@@ -3,7 +3,6 @@ const environment = process.env.NODE_ENV || 'development';
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path')
 
 const apiRoutes = require('./app/routes/apiRoutes');
 const htmlRoutes = require('./app/routes/htmlRoutes');
